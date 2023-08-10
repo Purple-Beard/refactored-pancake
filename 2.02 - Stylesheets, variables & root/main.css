@@ -1,0 +1,68 @@
+/* Cascading Stylesheet */
+
+/* 
+
+CSS Vaiables 
+
+":root" Represents an element that is the root of the document. 
+In HTML 4, this is always the HTML element.
+
+
+They allow us to create references that are easier to change later down the line
+change the background color in one place instead of 20 places for example
+
+*/
+:root {
+  --backgroundColor: #000000;
+  --textColor: #ffffff;
+  --accentColor: #4bda65;
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* pseudo selectors (is the user hovering on the link?) 
+
+element:state {
+  property: value;
+}
+
+*/
+
+/* change the color of links */
+a,
+a:visited,
+a:active,
+a:hover {
+  color: var(--textColor);
+  text-decoration: none; /* Get rid of the underline */
+}
+
+/* selecting all h1 elements */
+h1 {
+  font-size: 20px;
+  color: var(--accentColor);
+}
+
+/* select all divs on the page */
+div {
+  border: 1px solid var(--textColor);
+}
+
+/* select a certain class on the page */
+.contentImage {
+  text-align: center;
+}
+
+/* select an element with an id */
+#articleHeader {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: var(--accentColor);
+}
